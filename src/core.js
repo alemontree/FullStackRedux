@@ -16,7 +16,8 @@ function getWinners(vote) {
   else                      return [a, b];
 }
 export function next(state) {
-  const entries = state.get('entries').concat(getWinners(state.get('vote')));
+  const entries = state.get('entries')
+        .concat(getWinners(state.get('vote')));
   if (entries.size === 1) {
     return state.remove('vote')
                 .remove('entries')

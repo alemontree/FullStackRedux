@@ -1,8 +1,8 @@
-"use strict";
 import { Map, fromJS } from 'immutable';
 import { expect } from 'chai';
 
-import { reducer } from '../src/reducer';
+import reducer from '../src/reducer';
+console.log(reducer, typeof reducer);
 
 describe('reducer', () => {
   
