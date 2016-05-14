@@ -31,7 +31,7 @@ export function next(state) {
 }
 
 export function vote(voteState, entry) {
-  return state.updateIn(
+  return voteState.updateIn(
     ['tally', entry],
     0,
     tally => tally + 1

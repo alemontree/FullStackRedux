@@ -9,7 +9,7 @@ describe('store', () => {
     const store = makeStore();
     expect(store.getState()).to.equal(Map());
 
-    expect.dispatch({
+    store.dispatch({
       type: 'SET_ENTRIES',
       entries: ['Trainspotting', '28 Days Later']
     });
