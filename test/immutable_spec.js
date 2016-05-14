@@ -1,4 +1,4 @@
-use strict;
+"use strict";
 import { expect } from 'chai';
 import { List, Map } from 'immutable';
 // import chaiImmutable from 'chai-immutable';
@@ -16,7 +16,7 @@ describe('immutability', ()=> {
       let state = 42;
       let nextState = increment(state);
 
-      expect(nextState).to.equal.(43);
+      expect(nextState).to.equal(43);
       expect(state).to.equal(42);
     });
   });
