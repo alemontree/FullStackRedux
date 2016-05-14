@@ -27,7 +27,7 @@ describe('application logic', () => {
   });
 
   describe('next', () => {
-    
+
     it('takes the next two entries under vote', () => {
       const state = Map({
         entries: List.of('Trainspotting', '28 Days Later', 'Sunshine')
@@ -35,7 +35,7 @@ describe('application logic', () => {
       const nextState = next(state);
       expect(nextState).to.equal(Map({
         vote: Map({
-          pair: List.of('Trainspotting', '28 Day Later')
+          pair: List.of('Trainspotting', '28 Days Later')
         }),
         entries: List.of('Sunshine')
       }));
