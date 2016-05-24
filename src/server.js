@@ -1,8 +1,10 @@
 "use strict";
 import Server from 'socket.io';
 
-export default function startServer(store) {
-  const io = new Server().attach(8090);
+export const PORT = 8090;
+export function startServer(store) {
+
+  const io = new Server().attach(PORT);
   store.subscribe(
     () => io.emit('state', store.getState().toJS())
   );

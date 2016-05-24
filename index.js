@@ -1,10 +1,10 @@
 "use strict";
 import makeStore from './src/store';
-import startServer from './src/server';
+import { PORT, startServer } from './src/server';
 
 export const store = makeStore();
 startServer(store);
-console.log('listening...');
+console.log(`listening on port ${PORT}`);
 
 store.dispatch({
   type: 'SET_ENTRIES',
